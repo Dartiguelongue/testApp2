@@ -57,6 +57,8 @@ Chart.prototype.drawChart = function ()
     this.timeScaleStep = (this.canvas.width - this.valueScaleWidth) / (this.values.length - 1);
     this.valueScaleStep = (this.canvas.height - this.timeScaleHeight) / (this.maxValue - this.minValue);
 
+    context.setLineDash([0, 0]);
+
     // Effacer les dessins précedents
     context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -156,11 +158,15 @@ Chart.prototype.drawChart = function ()
     if (this.cursorIndex > -1 && this.cursorIndex < this.values.length)
     {
         context.beginPath();
+        
 
-        context.strokeStyle = '#00FF00';
+        context.strokeStyle = "#000000";
+        context.setLineDash([5, 15]);
 
         context.moveTo(this.timeScaleStep * this.cursorIndex + this.valueScaleWidth, 0);
         context.lineTo(this.timeScaleStep * this.cursorIndex + this.valueScaleWidth, this.canvas.height - this.timeScaleHeight)
+        context.moveTo(this.valueScaleWidth, (this.canvas.height - this.timeScaleHeight) - (this.values[this.cursorIndex].value - this.minValue) * this.valueScaleStep);
+        context.lineTo(this.canvas.width, (this.canvas.height - this.timeScaleHeight) - (this.values[this.cursorIndex].value - this.minValue) * this.valueScaleStep);
 
         context.stroke();
 

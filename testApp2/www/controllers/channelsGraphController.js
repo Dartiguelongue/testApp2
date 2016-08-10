@@ -12,12 +12,12 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
                 $scope.$parent.changeTitle($scope.device.name + ' - ' + $scope.device.channels[mySwiper.activeIndex].name, true);
                 $scope.$parent.changeThemeColor('theme-' + $scope.device.channels[mySwiper.activeIndex].color, true);                  
             }
-        });        
+        });
 
         setTimeout(loadCharts, 100);
     });
 
-    angular.element(window).bind('resize', loadCharts);    
+    angular.element(window).bind('resize', loadCharts);
 
     function loadCharts()
     {
@@ -37,7 +37,6 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
             range.style.left = '38px';
             range.min = '0';
             range.max = '9';
-            range.value = '0'; 
 
             range.addEventListener('input', function ()
             {
@@ -49,7 +48,7 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
                     {
                         index = i;
                     }
-                }                
+                }
 
                 if (index > -1)
                 {
@@ -58,7 +57,7 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
                 }
             });
 
-            chart.setCursorIndex(2);
+            chart.setCursorIndex(0);
 
             var values =
                 [
@@ -78,19 +77,12 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
 
             switch (i)
             {
-                case 0:
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
+                case 0: chart.setColor('#0000FF'); break;
+                case 1: chart.setColor('#FF0000'); break;
+                case 2: chart.setColor('#00FF00'); break;
+                case 3: chart.setColor('#FFFF00'); break;
+                default: chart.setColor('#000000'); break;
             }
-
-            chart.setColor();
 
             chart.drawChart();
 
