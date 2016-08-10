@@ -28,7 +28,8 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
             var canvas = document.getElementById('canvas' + i);
             var range = document.getElementById('range' + i);
             var chart = new Chart(canvas);
-            
+            var titi;
+
             canvas.width = window.innerWidth;
             canvas.height = (window.innerHeight - navBar.offsetHeight - range.offsetHeight - 20);
 
