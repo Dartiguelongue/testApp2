@@ -1,0 +1,7 @@
+{
+    "Trad_identification":"Identification",
+    "Trad_connexion":"connexion",
+    "Trad_nomUtilisateur":"Nom d'utilisateur",
+    "Trad_motDePasse": "Mot de passe",
+    "Trad_erreurIdentification": "Identifiant ou mot de passe incorrect"
+}

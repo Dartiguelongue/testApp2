@@ -1,0 +1,264 @@
+[
+  {
+    "channels": [
+      {
+        "color": "blue",
+        "name": "vint1",
+        "unit": "\u00b0C",
+        "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          },
+          {
+            "date": "1",
+            "value": "22.6"
+          },
+          {
+            "date": "2",
+            "value": "22.6"
+          },
+          {
+            "date": "3",
+            "value": "22.5"
+          },
+          {
+            "date": "3",
+            "value": "21.3"
+          },
+          {
+            "date": "3",
+            "value": "20.5"
+          },
+          {
+            "date": "3",
+            "value": "19.0"
+          },
+          {
+            "date": "3",
+            "value": "19.0"
+          }
+        ]
+      },
+      {
+        "color":  "red",
+        "name": "v1",
+        "unit": "u00b0C",
+        "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          },
+          {
+            "date": "1",
+            "value": "22.6"
+          },
+          {
+            "date": "2",
+            "value": "22.6"
+          },
+          {
+            "date": "3",
+            "value": "22.5"
+          },
+          {
+            "date": "3",
+            "value": "21.3"
+          },
+          {
+            "date": "3",
+            "value": "20.5"
+          },
+          {
+            "date": "3",
+            "value": "19.0"
+          },
+          {
+            "date": "3",
+            "value": "19.0"
+          }
+        ]
+      },
+      {
+        "color": "green",
+        "name": "v2",
+        "unit": "%HR",
+        "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          },
+          {
+            "date": "1",
+            "value": "22.6"
+          },
+          {
+            "date": "2",
+            "value": "22.6"
+          },
+          {
+            "date": "3",
+            "value": "22.5"
+          },
+          {
+            "date": "3",
+            "value": "21.3"
+          },
+          {
+            "date": "3",
+            "value": "20.5"
+          },
+          {
+            "date": "3",
+            "value": "19.0"
+          },
+          {
+            "date": "3",
+            "value": "19.0"
+          }
+        ]
+      }
+    ],
+    "index": "0",
+    "name": "KT320",
+    "serial": "3K 12.02.12345"
+  },
+  {
+    "channels": [
+      {
+        "color": "blue",
+        "name": "vint1",
+        "unit": "u00b0C",
+        "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      },
+      {
+        "color": "red",
+        "name": "v3",
+        "unit": "mA",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      },
+      {
+        "color": "green",
+        "name": "v4",
+        "unit": "V",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      }
+    ],
+    "index": "1",
+    "name": "KT320",
+    "serial": "3K 12.02.12346"
+  },
+  {
+    "channels": [
+      {
+        "color": "blue",
+        "name": "T1",
+        "unit": "u00b0C",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      },
+      {
+        "color": "red",
+        "name": "T3",
+        "unit": "u00b0C",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      }
+    ],
+    "index": "2",
+    "name": "KTT320",
+    "serial": "3K 12.02.50001"
+  },
+  {
+    "channels": [
+      {
+        "color": "blue",
+        "name": "vint1",
+        "unit": "u00b0C",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      },
+      {
+        "color": "red",
+        "name": "vint2",
+        "unit": "%HR",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      },
+      {
+        "color": "green",
+        "name": "vint3",
+        "unit": "ppm",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      },
+      {
+        "color": "yellow",
+        "name": "vint4",
+        "unit": "hpa",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      }
+    ],
+    "index": "3",
+    "name": "KCC320",
+    "serial": "3K 12.02.84568"
+  },
+  {
+    "channels": [
+      {
+        "color": "blue",
+        "name": "vint3",
+        "unit": "ppm",
+          "datas": [
+          {
+            "date": "0",
+            "value": "22.5"
+          }
+        ]
+      }
+    ],
+    "index": "4",
+    "name": "KCC320",
+    "serial": "3K 12.02.84569"
+  }
+]

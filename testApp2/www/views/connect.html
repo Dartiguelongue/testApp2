@@ -1,0 +1,36 @@
+<div class="view">
+    <div class="page">
+        <div class="page-content login-screen-content">
+            <div class="login-screen-title">{{'Trad_identification' | translate}}</div>
+            <form>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">{{'Trad_nomUtilisateur' | translate}}</div>
+                                <div class="item-input">
+                                    <input type="text" name="username" placeholder="{{'Trad_nomUtilisateur' | translate}}" ng-model="userName">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">{{'Trad_motDePasse' | translate}}</div>
+                                <div class="item-input">
+                                    <input type="password" name="password" placeholder="{{'Trad_motDePasse' | translate}}" ng-model="password">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>                
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <p><a class="button" ng-click="checkLogin()">{{'Trad_connexion' | translate}}</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

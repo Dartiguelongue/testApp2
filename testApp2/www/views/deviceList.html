@@ -1,0 +1,31 @@
+<div class="list-block">
+    <div class="list-group">
+        <ul>
+            <li class="list-group-title">Liste des appareils</li>
+
+            <li class="swipeout" ng-repeat="device in devices">
+                <div class="swipeout-content item-content">
+                    <div class="item-media">
+                        <i class="icon icon-f7"></i>
+                    </div>
+                    <div class="item-inner" ng-click="showChannels(device.index)">
+                        <div class="item-title">{{device.name}} - {{device.serial}}</div>
+                        <div class="item-after"><span class="badge">{{device.channels.length}}</span></div>
+                    </div>
+                </div>
+                <div class="swipeout-actions-right">
+                    <a class="action1" ng-click="showDeviceInfos(device.index)">Details appareil</a>
+                    <a class="swipeout-delete bg-red">Supprimer</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="popup popup-about">
+    <div class="content-block">
+        <p>{{selectedDevice.name}} - {{selectedDevice.serial}}</p>
+        <p><a class="close-popup">Close popup</a></p>
+        <p>Lorem ipsum dolor khjjkkg jdkjf ldjfskldjf ldjfkldfj dlkjfklsdfj lsdkjfklsdjfl lskdjkfjkhfshfndkjh hh j</p>
+    </div>
+</div>

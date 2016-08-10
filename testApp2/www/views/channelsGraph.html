@@ -1,0 +1,11 @@
+<div class="page-content">
+    <div class="swiper-container">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+            <div ng-repeat="channel in device.channels" class="swiper-slide">
+                <canvas id="canvas{{$index}}"></canvas>
+                <input id="range{{$index}}" type="range" />
+            </div>
+        </div>
+    </div>
+</div>
