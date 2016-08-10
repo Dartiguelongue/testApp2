@@ -57,8 +57,6 @@ Chart.prototype.drawChart = function ()
     this.timeScaleStep = (this.canvas.width - this.valueScaleWidth) / (this.values.length - 1);
     this.valueScaleStep = (this.canvas.height - this.timeScaleHeight) / (this.maxValue - this.minValue);
 
-    context.font = "12px Georgia";
-
     // Effacer les dessins précedents
     context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -71,6 +69,19 @@ Chart.prototype.drawChart = function ()
     context.stroke();
     context.closePath();
 
+    context.font = "14px Georgia";
+    context.textAlign = "right";
+    context.textBaseline = "middle";
+
+    for (var i = 0 ; i < this.valueScaleMarkNumber  ; i++)
+    {
+        var index = i * Math.max(this.values.length / this.valueScaleMarkNumber, 1);
+        var value = ((this.maxValue - this.minValue) / this.valueScaleMarkNumber) * i + this.minValue;
+
+        context.fillText(value.toPrecision(4), this.valueScaleWidth, this.canvas.height - this.timeScaleHeight - (i * this.valueScaleMarkStep));
+    }
+
+    // Dessin du quadrillage
     context.beginPath();
     context.strokeStyle = "#AAAAAA";
     context.lineWidth = 1;
@@ -90,6 +101,8 @@ Chart.prototype.drawChart = function ()
     context.stroke();
     context.closePath();
 
+
+
     // Dessin de l'échelle de temps
     context.beginPath();
 
@@ -100,6 +113,10 @@ Chart.prototype.drawChart = function ()
     context.stroke();    
 
     context.closePath();
+
+    context.font = "14px Georgia";
+    context.textAlign = "center";
+    context.textBaseline = "top";
 
     for (var i = 0 ; i < this.timeScaleMarkNumber ; i++)
     {

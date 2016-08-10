@@ -76,6 +76,22 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
 
             chart.setValues(values);
 
+            switch (i)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
+
+            chart.setColor();
+
             chart.drawChart();
 
             $scope.device.channels[i].chart = chart;
