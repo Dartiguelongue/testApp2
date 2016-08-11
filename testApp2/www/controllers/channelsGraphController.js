@@ -1,5 +1,7 @@
 app.controller('channelsGraphController', function ($scope, $location, $routeParams, $rootScope)
 {
+    
+    $scope.currentIndex = 0;
     $scope.device = JSON.parse($routeParams.data);    
 
     $scope.$on('$viewContentLoaded', function (event)
@@ -9,6 +11,7 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
             pagination: '.swiper-pagination',
             onSlideChangeEnd: function ()
             {
+                $scope.currentIndex = mySwiper.activeIndex;
                 $scope.$parent.changeTitle($scope.device.name + ' - ' + $scope.device.channels[mySwiper.activeIndex].name, true);
                 $scope.$parent.changeThemeColor('theme-' + $scope.device.channels[mySwiper.activeIndex].color, true);                  
             }
@@ -27,8 +30,7 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
         {
             var canvas = document.getElementById('canvas' + i);
             var range = document.getElementById('range' + i);
-            var chart = new Chart(canvas);
-            var titi;
+            var chart = new Chart(canvas);            
 
             canvas.width = window.innerWidth;
             canvas.height = (window.innerHeight - navBar.offsetHeight - range.offsetHeight - 20);
@@ -84,6 +86,13 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
                 case 3: chart.setColor('#FFFF00'); break;
                 default: chart.setColor('#000000'); break;
             }
+
+            chart.setOnSelectedIndexChangeListener(function (index)
+            {
+                var ran = document.getElementById('range' + $scope.currentIndex);
+
+                ran.value = index;
+            });
 
             chart.drawChart();
 

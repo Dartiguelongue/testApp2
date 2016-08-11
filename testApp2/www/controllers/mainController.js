@@ -63,7 +63,7 @@ app.controller('mainController', function ($scope, $location, $http)
         if (forceRefresh)
         {
             $scope.$apply();
-        }        
+        }
     }
 
     $scope.reset = function (forceRefresh)

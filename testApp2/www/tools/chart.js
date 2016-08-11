@@ -1,6 +1,7 @@
 ﻿function Chart(canvas)
 {
     this.canvas = canvas;
+    this.canvas.tag = this;
     this.minValue = Number.MAX_VALUE;
     this.maxValue = Number.MAX_VALUE * -1;
     this.minDateTick = Number.MAX_VALUE;
@@ -18,8 +19,26 @@
     this.timeScaleStep = 0;
     this.cursorIndex = -1;
 
+    this.onSelectedIndexChangeListener = undefined;
+
     this.color = "#0000FF";
     this.values = [];
+
+    this.canvas.onclick = function (event)
+    {
+        var x = event.x;
+
+        if (x > this.tag.valueScaleWidth)
+        {           
+            this.tag.setCursorIndex(Math.round((x - this.tag.valueScaleWidth) / this.tag.timeScaleStep));
+            this.tag.drawChart();
+        }
+        else
+        {
+            this.tag.setCursorIndex(-1);
+            this.tag.drawChart();
+        }
+    }
 }
 
 Chart.prototype.setColor = function (color)
@@ -34,7 +53,19 @@ Chart.prototype.setValues = function (values)
 
 Chart.prototype.setCursorIndex = function(index)
 {
+    var change = index != this.cursorIndex;
+
     this.cursorIndex = index;
+
+    if (change && this.onSelectedIndexChangeListener != undefined)
+    {
+        this.onSelectedIndexChangeListener(this.cursorIndex);
+    }
+}
+
+Chart.prototype.setOnSelectedIndexChangeListener = function(listener)
+{
+    this.onSelectedIndexChangeListener = listener;
 }
 
 Chart.prototype.drawChart = function ()
@@ -58,6 +89,7 @@ Chart.prototype.drawChart = function ()
     this.valueScaleStep = (this.canvas.height - this.timeScaleHeight) / (this.maxValue - this.minValue);
 
     context.setLineDash([0, 0]);
+    context.fillStyle = "#000000";
 
     // Effacer les dessins précedents
     context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -102,8 +134,6 @@ Chart.prototype.drawChart = function ()
 
     context.stroke();
     context.closePath();
-
-
 
     // Dessin de l'échelle de temps
     context.beginPath();
@@ -157,9 +187,10 @@ Chart.prototype.drawChart = function ()
     // Dessin du curseur
     if (this.cursorIndex > -1 && this.cursorIndex < this.values.length)
     {
+        var textHeight = context.measureText("M").width;;         
+
         context.beginPath();
         
-
         context.strokeStyle = "#000000";
         context.setLineDash([5, 15]);
 
@@ -169,7 +200,14 @@ Chart.prototype.drawChart = function ()
         context.lineTo(this.canvas.width, (this.canvas.height - this.timeScaleHeight) - (this.values[this.cursorIndex].value - this.minValue) * this.valueScaleStep);
 
         context.stroke();
-
         context.closePath();
+
+        context.setLineDash([0, 0]);
+        context.fillStyle = "#FFFFFF";
+        context.fillRect(0, ((this.canvas.height - this.timeScaleHeight) - (this.values[this.cursorIndex].value - this.minValue) * this.valueScaleStep) - (textHeight / 2), this.valueScaleWidth, textHeight);
+        context.strokeRect(0, ((this.canvas.height - this.timeScaleHeight) - (this.values[this.cursorIndex].value - this.minValue) * this.valueScaleStep) - (textHeight / 2), this.valueScaleWidth, textHeight);
+
+        context.fillRect(this.timeScaleStep * this.cursorIndex + this.valueScaleWidth - 20, this.canvas.height - this.timeScaleHeight, 40, this.timeScaleHeight);
+        context.strokeRect(this.timeScaleStep * this.cursorIndex + this.valueScaleWidth - 20, this.canvas.height - this.timeScaleHeight, 40, this.timeScaleHeight);
     }
 };
