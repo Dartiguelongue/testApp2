@@ -4,119 +4,17 @@
       {
         "color": "blue",
         "name": "vint1",
-        "unit": "\u00b0C",
-        "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          },
-          {
-            "date": "1",
-            "value": "22.6"
-          },
-          {
-            "date": "2",
-            "value": "22.6"
-          },
-          {
-            "date": "3",
-            "value": "22.5"
-          },
-          {
-            "date": "3",
-            "value": "21.3"
-          },
-          {
-            "date": "3",
-            "value": "20.5"
-          },
-          {
-            "date": "3",
-            "value": "19.0"
-          },
-          {
-            "date": "3",
-            "value": "19.0"
-          }
-        ]
+        "unit": "\u00b0C"
       },
       {
         "color":  "red",
         "name": "v1",
-        "unit": "u00b0C",
-        "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          },
-          {
-            "date": "1",
-            "value": "22.6"
-          },
-          {
-            "date": "2",
-            "value": "22.6"
-          },
-          {
-            "date": "3",
-            "value": "22.5"
-          },
-          {
-            "date": "3",
-            "value": "21.3"
-          },
-          {
-            "date": "3",
-            "value": "20.5"
-          },
-          {
-            "date": "3",
-            "value": "19.0"
-          },
-          {
-            "date": "3",
-            "value": "19.0"
-          }
-        ]
+        "unit": "\u00b0C"
       },
       {
         "color": "green",
         "name": "v2",
-        "unit": "%HR",
-        "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          },
-          {
-            "date": "1",
-            "value": "22.6"
-          },
-          {
-            "date": "2",
-            "value": "22.6"
-          },
-          {
-            "date": "3",
-            "value": "22.5"
-          },
-          {
-            "date": "3",
-            "value": "21.3"
-          },
-          {
-            "date": "3",
-            "value": "20.5"
-          },
-          {
-            "date": "3",
-            "value": "19.0"
-          },
-          {
-            "date": "3",
-            "value": "19.0"
-          }
-        ]
+        "unit": "%HR"
       }
     ],
     "index": "0",
@@ -128,35 +26,17 @@
       {
         "color": "blue",
         "name": "vint1",
-        "unit": "u00b0C",
-        "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "\u00b0C"
       },
       {
         "color": "red",
         "name": "v3",
-        "unit": "mA",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "mA"
       },
       {
         "color": "green",
         "name": "v4",
-        "unit": "V",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "V"
       }
     ],
     "index": "1",
@@ -168,24 +48,12 @@
       {
         "color": "blue",
         "name": "T1",
-        "unit": "u00b0C",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "\u00b0C"
       },
       {
         "color": "red",
         "name": "T3",
-        "unit": "u00b0C",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "\u00b0C"
       }
     ],
     "index": "2",
@@ -197,46 +65,22 @@
       {
         "color": "blue",
         "name": "vint1",
-        "unit": "u00b0C",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "\u00b0C"
       },
       {
         "color": "red",
         "name": "vint2",
-        "unit": "%HR",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "%HR"
       },
       {
         "color": "green",
         "name": "vint3",
-        "unit": "ppm",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "ppm"
       },
       {
         "color": "yellow",
         "name": "vint4",
-        "unit": "hpa",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "hpa"
       }
     ],
     "index": "3",
@@ -248,13 +92,7 @@
       {
         "color": "blue",
         "name": "vint3",
-        "unit": "ppm",
-          "datas": [
-          {
-            "date": "0",
-            "value": "22.5"
-          }
-        ]
+        "unit": "ppm"
       }
     ],
     "index": "4",

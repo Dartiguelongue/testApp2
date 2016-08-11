@@ -18,7 +18,7 @@ app.controller('connectController', function ($scope, $location, $http, md5, $tr
                     if (data[i].password == md5.createHash($scope.password))
                     {
                         connectionOK = true;
-                        break;                        
+                        break;
                     }
                 }
             }
@@ -47,5 +47,3 @@ app.controller('connectController', function ($scope, $location, $http, md5, $tr
         });
     };
 });
-
-

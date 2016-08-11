@@ -12,8 +12,8 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
             onSlideChangeEnd: function ()
             {
                 $scope.currentIndex = mySwiper.activeIndex;
-                $scope.$parent.changeTitle($scope.device.name + ' - ' + $scope.device.channels[mySwiper.activeIndex].name, true);
-                $scope.$parent.changeThemeColor('theme-' + $scope.device.channels[mySwiper.activeIndex].color, true);                  
+                $scope.$parent.changeTitle($scope.device.name + ' - ' + $scope.device.channels[mySwiper.activeIndex].name + ' [' + $scope.device.channels[mySwiper.activeIndex].unit + ']', true);
+                $scope.$parent.changeThemeColor('theme-' + $scope.device.channels[mySwiper.activeIndex].color, true);
             }
         });
 
@@ -43,24 +43,9 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
 
             range.addEventListener('input', function ()
             {
-                var index = -1;
-
-                for (var i = 0 ; i < 6 ; i++)
-                {
-                    if (this.id == 'range' + i)
-                    {
-                        index = i;
-                    }
-                }
-
-                if (index > -1)
-                {
-                    $scope.device.channels[index].chart.setCursorIndex(this.value);
-                    $scope.device.channels[index].chart.drawChart();
-                }
-            });
-
-            chart.setCursorIndex(0);
+                $scope.device.channels[$scope.currentIndex].chart.setCursorIndex(this.value);
+                $scope.device.channels[$scope.currentIndex].chart.drawChart();
+            });            
 
             var values =
                 [
@@ -76,7 +61,7 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
                     { 'value': '15.0', 'date': '10000' }
                 ];
 
-            chart.setValues(values);
+            chart.setValues(values);            
 
             switch (i)
             {
@@ -86,7 +71,7 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
                 case 3: chart.setColor('#FFFF00'); break;
                 default: chart.setColor('#000000'); break;
             }
-
+            
             chart.setOnSelectedIndexChangeListener(function (index)
             {
                 var ran = document.getElementById('range' + $scope.currentIndex);
