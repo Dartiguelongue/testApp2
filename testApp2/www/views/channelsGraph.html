@@ -2,7 +2,7 @@
     <div class="swiper-container">
         <div class="swiper-pagination"></div>
         <div class="swiper-wrapper">
-            <div ng-repeat="channel in device.channels" class="swiper-slide">
+            <div ng-repeat="channel in device.getChannels()" class="swiper-slide">
                 <canvas id="canvas{{$index}}"></canvas>
                 <input id="range{{$index}}" value="0" type="range" />
             </div>

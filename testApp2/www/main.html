@@ -1,21 +1,21 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="mainController">
 
 <head>
     <title>testApp</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <!-- Framework 7 -->
-    <link rel="stylesheet" href="libs/framework7/framework7.material.min.css">
-    <link rel="stylesheet" href="libs/framework7/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="libs/framework7/framework7.material.min.css" />
+    <link rel="stylesheet" href="libs/framework7/framework7.material.colors.min.css" />
 
-    <!-- Feuilles de styles perso -->
-    <link rel="stylesheet" href="css/swiper.css">
+    <!-- Theme -->
+    <link rel="stylesheet" href="themes/kimo/css/swiper.css" />
 </head>
 
-<body ng-controller="mainController">
+<body >
     <!-- Side panel -->
     <div class="panel-overlay"></div>
     <div class="panel panel-left panel-cover">
@@ -33,7 +33,7 @@
                         <i class="icon icon-back"></i>
                     </a>
                 </div>
-                <div class="center" ng-model="title">{{title}}</div>
+                <div class="center" ng-bind="title"></div>
                 <div class="right">
                     <a data-popover=".popover-links" class="link icon-only open-popover" ng-click="exportPDF()">
                         <i class="icon icon-bars"></i>
@@ -63,10 +63,12 @@
     </div>
 
     <!-- Cordova -->
-    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova.js">
+    </script>
 
     <!-- Framework 7 -->
-    <script type="text/javascript" src="libs/framework7/framework7.min.js"></script>
+    <script type="text/javascript" src="libs/framework7/framework7.min.js">
+    </script>
 
     <!-- Angular js -->
     <script type="text/javascript" src="libs/angular/angular.min.js"></script>
@@ -75,7 +77,7 @@
     <script type="text/javascript" src="libs/angular/angular-translate-loader-static-files.min.js"></script>
     <script type="text/javascript" src="libs/angular/angular-md5.min.js"></script>
 
-    <!-- Pdf -->    
+    <!-- Pdf -->
     <script type="text/javascript" src="libs/pdfmake/pdfmake.min.js"></script>
     <script type="text/javascript" src="libs/pdfmake/vfs_fonts.js"></script>
 
@@ -83,15 +85,17 @@
     <script type="text/javascript" src="app.js"></script>
 
     <!-- Outils -->
-    <script type="text/javascript" src="tools/image.js"></script>
-    <script type="text/javascript" src="tools/file.js"></script>
-    <script type="text/javascript" src="tools/chart.js"></script>
+    <script type="text/javascript" src="js/class/image.js"></script>
+    <script type="text/javascript" src="js/class/file.js"></script>
+    <script type="text/javascript" src="js/class/chart.js"></script>
+    <script type="text/javascript" src="js/class/device.js"></script>
+    <script type="text/javascript" src="js/class/channel.js"></script>
 
-    <!-- Controllers -->    
-    <script type="text/javascript" src="controllers/mainController.js"></script>
-    <script type="text/javascript" src="controllers/connectController.js"></script>
-    <script type="text/javascript" src="controllers/deviceListController.js"></script>
-    <script type="text/javascript" src="controllers/channelsGraphController.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/mainController.js"></script>
+    <script type="text/javascript" src="js/controllers/connectController.js"></script>
+    <script type="text/javascript" src="js/controllers/deviceListController.js"></script>
+    <script type="text/javascript" src="js/controllers/channelsGraphController.js"></script>
 </body>
 
 </html>

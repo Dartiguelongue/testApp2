@@ -1,7 +1,7 @@
 var app = angular.module('app', ['ngRoute', 'angular-md5', 'pascalprecht.translate']);
 var fw7 = new Framework7({ swipePanel: 'left' });
-var lan = navigator.language;
 var navBar = document.getElementById('navBar');
+var devicesList = [];
 
 // Table de routage
 app.config(function ($routeProvider)
@@ -12,13 +12,13 @@ app.config(function ($routeProvider)
         controller: 'connectController'
     });
 
-    $routeProvider.when('/deviceList/:data',
+    $routeProvider.when('/deviceList',
     {
-        templateUrl: 'views/deviceList.html',   
+        templateUrl: 'views/deviceList.html',
         controller: 'deviceListController'
     });
 
-    $routeProvider.when('/channelsGraph/:data',
+    $routeProvider.when('/channelsGraph/:deviceIndex',
     {
         templateUrl: 'views/channelsGraph.html',
         controller: 'channelsGraphController'
@@ -31,8 +31,8 @@ app.config(function ($routeProvider)
 app.config(function ($translateProvider)
 {
     $translateProvider.useStaticFilesLoader({
-      prefix: 'resources/translations/',
-      suffix: '.json'
+        prefix: 'translations/',
+        suffix: '.json'
     });
 
     $translateProvider.registerAvailableLanguageKeys(['en', 'es', 'fr'],
@@ -43,5 +43,5 @@ app.config(function ($translateProvider)
         "*": 'en'
     });
 
-    $translateProvider.preferredLanguage(navigator.language);    
+    $translateProvider.preferredLanguage(navigator.language);
 });

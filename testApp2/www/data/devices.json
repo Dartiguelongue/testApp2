@@ -1,102 +1,159 @@
 [
   {
+    "code": "111111",
+    "name": "KT320",
+    "serialNumber": "3K 12.02.12345",
+    "version": "1.02",
+    "build": "354",
     "channels": [
       {
-        "color": "blue",
-        "name": "vint1",
-        "unit": "\u00b0C"
-      },
-      {
-        "color":  "red",
-        "name": "v1",
-        "unit": "\u00b0C"
-      },
-      {
-        "color": "green",
-        "name": "v2",
-        "unit": "%HR"
+        "index": "0",
+        "number": "1",
+        "internal": "true",
+        "name": "Temperature interne",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Sonde CTN interne",
+        "probeSerialNumber": "3K 12.02.12345"
       }
-    ],
-    "index": "0",
-    "name": "KT320",
-    "serial": "3K 12.02.12345"
+    ]
   },
   {
+    "code": "111111",
+    "name": "KT320",
+    "serialNumber": "3K 12.02.12346",
+    "version": "1.03",
+    "build": "365",
     "channels": [
       {
-        "color": "blue",
-        "name": "vint1",
-        "unit": "\u00b0C"
+        "index": "0",
+        "number": "1",
+        "internal": "true",
+        "name": "Temperature interne",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Sonde CTN interne",
+        "probeSerialNumber": "3K 12.02.12346"
       },
       {
-        "color": "red",
-        "name": "v3",
-        "unit": "mA"
+        "index": "1",
+        "number": "1",
+        "internal": "false",
+        "name": "Temperature externe",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Sonde thermo hygro inox",
+        "probeSerialNumber": "3K 12.02.56478"
       },
       {
-        "color": "green",
-        "name": "v4",
-        "unit": "V"
+        "index": "2",
+        "number": "2",
+        "internal": "false",
+        "name": "Hygrometrie externe",
+        "unit": "%HR",
+        "decimalPlaces": "1",
+        "probeName": "Sonde thermo hygro inox",
+        "probeSerialNumber": "3K 12.02.56478"
       }
-    ],
-    "index": "1",
-    "name": "KT320",
-    "serial": "3K 12.02.12346"
+    ]
   },
   {
-    "channels": [
-      {
-        "color": "blue",
-        "name": "T1",
-        "unit": "\u00b0C"
-      },
-      {
-        "color": "red",
-        "name": "T3",
-        "unit": "\u00b0C"
-      }
-    ],
-    "index": "2",
+    "code": "222222",
     "name": "KTT320",
-    "serial": "3K 12.02.50001"
-  },
-  {
+    "serialNumber": "3K 12.02.45687",
+    "version": "1.06",
+    "build": "625",
     "channels": [
       {
-        "color": "blue",
-        "name": "vint1",
-        "unit": "\u00b0C"
+        "index": "0",
+        "number": "1",
+        "internal": "true",
+        "name": "Thermocouple K",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Thermocouple",
+        "probeSerialNumber": "3K 12.02.45687"
       },
       {
-        "color": "red",
-        "name": "vint2",
-        "unit": "%HR"
+        "index": "1",
+        "number": "2",
+        "internal": "true",
+        "name": "Thermocouple K",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Thermocouple",
+        "probeSerialNumber": "3K 12.02.45687"
       },
       {
-        "color": "green",
-        "name": "vint3",
-        "unit": "ppm"
+        "index": "2",
+        "number": "3",
+        "internal": "true",
+        "name": "Thermocouple K",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Thermocouple",
+        "probeSerialNumber": "3K 12.02.45687"
       },
       {
-        "color": "yellow",
-        "name": "vint4",
-        "unit": "hpa"
+        "index": "3",
+        "number": "4",
+        "internal": "true",
+        "name": "Thermocouple K",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Thermocouple",
+        "probeSerialNumber": "3K 12.02.45687"
       }
-    ],
-    "index": "3",
-    "name": "KCC320",
-    "serial": "3K 12.02.84568"
+
+    ]
   },
   {
+    "code": "333333",
+    "name": "KCC320",
+    "serialNumber": "3K 12.02.00521",
+    "version": "1.02",
+    "build": "354",
     "channels": [
       {
-        "color": "blue",
-        "name": "vint3",
-        "unit": "ppm"
+        "index": "0",
+        "number": "1",
+        "internal": "true",
+        "name": "Temperature interne",
+        "unit": "°C",
+        "decimalPlaces": "1",
+        "probeName": "Sonde thermo hygro interne",
+        "probeSerialNumber": "3K 12.02.00521"
+      },
+      {
+        "index": "1",
+        "number": "2",
+        "internal": "true",
+        "name": "Hygrometrie interne",
+        "unit": "%RH",
+        "decimalPlaces": "1",
+        "probeName": "Sonde thermo hygro interne",
+        "probeSerialNumber": "3K 12.02.00521"
+      },
+      {
+        "index": "2",
+        "number": "3",
+        "internal": "true",
+        "name": "CO2 interne",
+        "unit": "ppm",
+        "decimalPlaces": "0",
+        "probeName": "Sonde CO2 interne",
+        "probeSerialNumber": "3K 12.02.00521"
+      },
+      {
+        "index": "3",
+        "number": "4",
+        "internal": "true",
+        "name": "Pression atmospherique interne",
+        "unit": "hpa",
+        "decimalPlaces": "2",
+        "probeName": "Sonde pression atmospherique interne",
+        "probeSerialNumber": "3K 12.02.00521"
       }
-    ],
-    "index": "4",
-    "name": "KCC320",
-    "serial": "3K 12.02.84569"
+    ]
   }
 ]

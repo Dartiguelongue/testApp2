@@ -43,22 +43,34 @@ Device.prototype.getFullVersionString = function ()
     return this._version + ' (b' + this._build + ')';
 };
 
-Device.prototype.getChannelNumber = function ()
+Device.prototype.getChannels = function ()
 {
-    return this._channels.length;
+    return this._channels;
 };
 
-Device.prototype.getChannel = function (index)
+Device.prototype.loadJsonString = function (jsonString)
 {
-    return this._channels[index];
+    var jsonData = JSON.parse(jsonString);
+
+    this._code = jsonData.code;
+    this._name = jsonData.name;
+    this._serialNumber = jsonData.serialNumber;
+    this._version = jsonData.version;
+    this._build = jsonData.build;
+    
+    this._channels = [];
+
+    for (var i = 0 ; i < jsonData.channels.length ; i++)
+    {
+        var channel = new Channel();
+
+        channel.loadJsonString(JSON.stringify(jsonData.channels[i]));
+
+        this._channels.push(channel);
+    }
 };
 
-Device.prototype.loadJSON = function (json)
-{
-
-};
-
-Device.prototype.createJSON = function ()
+Device.prototype.createJsonString = function ()
 {
     var json = '';
 

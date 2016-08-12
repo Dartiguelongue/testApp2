@@ -1,7 +1,7 @@
 app.controller('mainController', function ($scope, $location, $http)
 {    
-    $scope.themeColor = "theme-blue";
-    $scope.title = "testApp";
+    $scope.colorTheme = "theme-red"; // red, blue, green, black, yellow, white, gray ou pink    
+    $scope.title = "testApp"; 
 
     $scope.exportPDF = function ()
     {     
@@ -46,9 +46,9 @@ app.controller('mainController', function ($scope, $location, $http)
         });    
     };
 
-    $scope.changeThemeColor = function (value, forceRefresh)
+    $scope.changeColorTheme = function (value, forceRefresh)
     {
-        $scope.themeColor = value;
+        $scope.colorTheme = value;
         
         if (forceRefresh)
         {

@@ -27,8 +27,20 @@ app.controller('connectController', function ($scope, $location, $http, md5, $tr
             {
                 $http.get('data/devices.json').success(function (data)
                 {
+                    devicesList = [];
+
+                    for (var i = 0 ; i < data.length ; i++)
+                    {
+                        var device = new Device();
+
+                        device.loadJsonString(JSON.stringify(data[i]));
+
+                        devicesList.push(device);
+                    }
+                    
+                    $location.path('/deviceList');
+
                     fw7.hidePreloader();
-                    $location.path('/deviceList/' + JSON.stringify(data));
 
                 }).error(function ()
                 {

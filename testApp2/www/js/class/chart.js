@@ -152,8 +152,8 @@ Chart.prototype.drawChart = function ()
 
     for (var i = 0 ; i < this.timeScaleMarkNumber ; i++)
     {
-        var index = i * Math.max(this.values.length / this.timeScaleMarkNumber, 1);
-        var date = new Date(Number.parseInt(this.values[index].date));
+        var tick = (((this.maxDateTick - this.minDateTick) / this.timeScaleMarkNumber) * i) + this.minDateTick; 
+        var date = new Date(tick);
 
         context.fillText(date.toLocaleTimeString()  , this.timeScaleMarkStep * i + this.valueScaleWidth, this.canvas.height - this.timeScaleHeight);
     }
