@@ -1,6 +1,6 @@
 app.controller('mainController', function ($scope, $location, $http)
 {    
-    $scope.colorTheme = "theme-red"; // red, blue, green, black, yellow, white, gray ou pink    
+    $scope.colorTheme = "theme-blue"; // red, blue, green, black, yellow, white, gray ou pink    
     $scope.title = "testApp"; 
 
     $scope.exportPDF = function ()
@@ -46,36 +46,26 @@ app.controller('mainController', function ($scope, $location, $http)
         });    
     };
 
-    $scope.changeColorTheme = function (value, forceRefresh)
+    $scope.changeColorTheme = function (value)
     {
-        $scope.colorTheme = value;
-        
-        if (forceRefresh)
-        {
-            $scope.$apply();
-        }
+        $scope.colorTheme = value;        
     }
 
-    $scope.changeTitle = function (value, forceRefresh)
+    $scope.changeTitle = function (value)
     {
-        $scope.title = value;
-
-        if (forceRefresh)
-        {
-            $scope.$apply();
-        }
+        $scope.title = value;        
     }
 
-    $scope.reset = function (forceRefresh)
+    $scope.reset = function ()
     {
-        $scope.themeColor = "theme-blue";
-        $scope.title = "testApp";
-
-        if (forceRefresh)
-        {
-            $scope.$apply();
-        }
+        $scope.colorTheme = "theme-blue";
+        $scope.title = "testApp";        
     };
+
+    $scope.refresh = function()
+    {
+        $scope.$apply();
+    }
 
     $scope.goBack = function ()
     {

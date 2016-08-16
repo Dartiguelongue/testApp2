@@ -1,6 +1,5 @@
 app.controller('channelsGraphController', function ($scope, $location, $routeParams)
-{
-    
+{    
     $scope.currentIndex = 0;
     $scope.device = devicesList[$routeParams.deviceIndex];
 
@@ -12,8 +11,9 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
             onSlideChangeEnd: function ()
             {
                 $scope.currentIndex = mySwiper.activeIndex;
-                $scope.$parent.changeTitle($scope.device.getChannels()[mySwiper.activeIndex].getFullName(), true);
-                //$scope.$parent.changeThemeColor('theme-' + $scope.device.channels[mySwiper.activeIndex].color, true);
+                $scope.$parent.changeTitle($scope.device.getChannels()[mySwiper.activeIndex].getFullName());
+                $scope.$parent.changeColorTheme('theme-' + $scope.device.getChannels()[mySwiper.activeIndex].getTheme());
+                $scope.$parent.refresh();
             }
         });
 
@@ -50,14 +50,7 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
 
             chart.setValues(channel.getValues());
 
-            switch (i)
-            {
-                case 0: chart.setColor('#0000FF'); break;
-                case 1: chart.setColor('#FF0000'); break;
-                case 2: chart.setColor('#00FF00'); break;
-                case 3: chart.setColor('#FFDD00'); break;
-                default: chart.setColor('#000000'); break;
-            }
+            chart.setColor(channel.getColor());
             
             chart.setOnSelectedIndexChangeListener(function (index)
             {

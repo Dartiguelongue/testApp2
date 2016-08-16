@@ -8,6 +8,8 @@
     this._decimalPlaces = 0;
     this._probeName = '';
     this._probeSerialNumber = '';
+    this._theme = 'blue';
+    this._color = '#0000FF';
     this._values = [];
 }
 
@@ -51,6 +53,16 @@ Channel.prototype.getProbeSerialNumber = function ()
     return this._probeSerialNumber;
 };
 
+Channel.prototype.getTheme = function ()
+{
+    return this._theme;
+};
+
+Channel.prototype.getColor = function ()
+{
+    return this._color;
+};
+
 Channel.prototype.getValues = function()
 {
     return this._values;
@@ -77,6 +89,8 @@ Channel.prototype.loadJsonString = function (jsonString)
     this._probeName = jsonData.probeName;
     this._probeSerialNumber = jsonData.probeSerialNumber;
     this._decimalPlaces = jsonData.decimalPlaces;
+    this._theme = jsonData.theme;
+    this._color = jsonData.color;
     this._values = [];
 
     // Nombre de valeur entre 10 et 110;

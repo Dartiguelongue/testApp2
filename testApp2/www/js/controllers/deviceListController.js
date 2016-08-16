@@ -2,12 +2,12 @@ app.controller('deviceListController', function ($scope, $location)
 {
     $scope.devices = devicesList;    
 
-    $scope.$parent.reset(false);
+    $scope.$parent.reset();
 
     $scope.showChannels = function (deviceIndex)
     {        
-        $scope.$parent.changeTitle(devicesList[deviceIndex].getChannels()[0].getFullName(), false);
-        //$scope.$parent.changeThemeColor('theme-' + $scope.selectedDevice.getChannel(0).color, false);
+        $scope.$parent.changeTitle(devicesList[deviceIndex].getChannels()[0].getFullName());
+        $scope.$parent.changeColorTheme('theme-' + devicesList[deviceIndex].getChannels()[0].getTheme());
 
         $location.path('/channelsGraph/' + deviceIndex);
     };

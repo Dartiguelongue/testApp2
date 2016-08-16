@@ -25,7 +25,7 @@ app.controller('connectController', function ($scope, $location, $http, md5, $tr
 
             if (connectionOK)
             {
-                $http.get('data/devices.json').success(function (data)
+                $http.get('data/devices.json', {header: {'Content-Type': 'application/json; charset=UTF-8'}}).success(function (data)
                 {
                     devicesList = [];
 

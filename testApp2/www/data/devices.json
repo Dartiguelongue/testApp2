@@ -1,4 +1,4 @@
-[
+ï»¿[
   {
     "code": "111111",
     "name": "KT320",
@@ -11,10 +11,12 @@
         "number": "1",
         "internal": "true",
         "name": "Temperature interne",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Sonde CTN interne",
-        "probeSerialNumber": "3K 12.02.12345"
+        "probeSerialNumber": "3K 12.02.12345",
+        "theme": "blue",
+        "color": "#0000FF"
       }
     ]
   },
@@ -30,20 +32,24 @@
         "number": "1",
         "internal": "true",
         "name": "Temperature interne",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Sonde CTN interne",
-        "probeSerialNumber": "3K 12.02.12346"
+        "probeSerialNumber": "3K 12.02.12346",
+        "theme": "blue",
+        "color": "#0000FF"
       },
       {
         "index": "1",
         "number": "1",
         "internal": "false",
         "name": "Temperature externe",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Sonde thermo hygro inox",
-        "probeSerialNumber": "3K 12.02.56478"
+        "probeSerialNumber": "3K 12.02.56478",
+        "theme": "red",
+        "color": "#FF0000"
       },
       {
         "index": "2",
@@ -53,7 +59,9 @@
         "unit": "%HR",
         "decimalPlaces": "1",
         "probeName": "Sonde thermo hygro inox",
-        "probeSerialNumber": "3K 12.02.56478"
+        "probeSerialNumber": "3K 12.02.56478",
+        "theme": "green",
+        "color": "#00FF00"
       }
     ]
   },
@@ -69,40 +77,48 @@
         "number": "1",
         "internal": "true",
         "name": "Thermocouple K",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Thermocouple",
-        "probeSerialNumber": "3K 12.02.45687"
+        "probeSerialNumber": "3K 12.02.45687",
+        "theme": "blue",
+        "color": "#0000FF"
       },
       {
         "index": "1",
         "number": "2",
         "internal": "true",
         "name": "Thermocouple K",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Thermocouple",
-        "probeSerialNumber": "3K 12.02.45687"
+        "probeSerialNumber": "3K 12.02.45687",
+        "theme": "red",
+        "color": "#FF0000"
       },
       {
         "index": "2",
         "number": "3",
         "internal": "true",
         "name": "Thermocouple K",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Thermocouple",
-        "probeSerialNumber": "3K 12.02.45687"
+        "probeSerialNumber": "3K 12.02.45687",
+        "theme": "green",
+        "color": "#00FF00"
       },
       {
         "index": "3",
         "number": "4",
         "internal": "true",
         "name": "Thermocouple K",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Thermocouple",
-        "probeSerialNumber": "3K 12.02.45687"
+        "probeSerialNumber": "3K 12.02.45687",
+        "theme": "yellow",
+        "color": "#FFFF00"
       }
 
     ]
@@ -119,10 +135,12 @@
         "number": "1",
         "internal": "true",
         "name": "Temperature interne",
-        "unit": "°C",
+        "unit": "Â°C",
         "decimalPlaces": "1",
         "probeName": "Sonde thermo hygro interne",
-        "probeSerialNumber": "3K 12.02.00521"
+        "probeSerialNumber": "3K 12.02.00521",
+        "theme": "blue",
+        "color": "#0000FF"
       },
       {
         "index": "1",
@@ -132,7 +150,9 @@
         "unit": "%RH",
         "decimalPlaces": "1",
         "probeName": "Sonde thermo hygro interne",
-        "probeSerialNumber": "3K 12.02.00521"
+        "probeSerialNumber": "3K 12.02.00521",
+        "theme": "red",
+        "color": "#FF0000"
       },
       {
         "index": "2",
@@ -142,7 +162,9 @@
         "unit": "ppm",
         "decimalPlaces": "0",
         "probeName": "Sonde CO2 interne",
-        "probeSerialNumber": "3K 12.02.00521"
+        "probeSerialNumber": "3K 12.02.00521",
+        "theme": "green",
+        "color": "#00FF00"
       },
       {
         "index": "3",
@@ -152,7 +174,9 @@
         "unit": "hpa",
         "decimalPlaces": "2",
         "probeName": "Sonde pression atmospherique interne",
-        "probeSerialNumber": "3K 12.02.00521"
+        "probeSerialNumber": "3K 12.02.00521",
+        "theme": "yellow",
+        "color": "#FFFF00"
       }
     ]
   }
