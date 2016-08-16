@@ -1,7 +1,7 @@
 ﻿
 function readTextFile(folderPath, fileName, encoding, callback)
 {
-    ///<summary> Lecture d'un fichier texte </summary>
+    ///<summary> Lecture asynchrone d'un fichier texte </summary>
     ///<param name="folderPath" type="cordova.file"> Chemin du dossier </param>
     ///<param name="fileName" type="String"> Nom du fichier </param>
     ///<param name="encoding" type="String"> Encodage de lecture </param>
@@ -33,7 +33,7 @@ function readTextFile(folderPath, fileName, encoding, callback)
 
 function readBinaryFile(folderPath, fileName, callback)
 {
-    ///<summary> Lecture d'un fichier binaire </summary>
+    ///<summary> Lecture asynchrone d'un fichier binaire </summary>
     ///<param name="folderPath" type="cordova.file"> Chemin du dossier </param>
     ///<param name="fileName" type="String"> Nom du fichier </param>
     ///<param name="callback" type="function(data)"> Fonction appelée lorsque la lecture est terminée </param>
@@ -64,12 +64,12 @@ function readBinaryFile(folderPath, fileName, callback)
 
 function writeTextFile(folderPath, fileName, text, callback)
 {
-    ///<summary> Ecriture d'un fichier texte </summary>
+    ///<summary> Ecriture asynchrone d'un fichier texte </summary>
     ///<param name="folderPath" type="cordova.file"> Chemin du dossier </param>
     ///<param name="fileName" type="String"> Nom du fichier </param>
     ///<param name="text" type"String"> Texte à écrire </param>
     ///<param name="callback" type="function()"> Fonction appelée lorsque l'écriture est terminée </param>
-
+    
     window.resolveLocalFileSystemURL(folderPath, directoryFound, writeError);
 
     function directoryFound(fileSystem)
@@ -99,14 +99,14 @@ function writeTextFile(folderPath, fileName, text, callback)
 
 function writeBinaryFile(folderPath, fileName, binaryArray, callback)
 {
-    ///<summary> Ecriture d'un fichier binaire </summary>
+    ///<summary> Ecriture asynchrone d'un fichier binaire </summary>
     ///<param name="folderPath" type="cordova.file"> Chemin du dossier </param>
     ///<param name="fileName" type="String"> Nom du fichier </param>
     ///<param name="binaryArray" type"ArrayBuffer"> Buffer à écrire </param>
     ///<param name="callback" type="function()"> Fonction appelée lorsque l'écriture est terminée </param>
     
     window.resolveLocalFileSystemURL(folderPath, directoryFound, writeError);
-
+    
     function directoryFound (fileSystem)
     {
         fileSystem.getFile(fileName, { create: true }, fileFoundOrCreate);
@@ -134,7 +134,7 @@ function writeBinaryFile(folderPath, fileName, binaryArray, callback)
 
 function openFile(folderPath, fileName)
 {
-    ///<summary> Ouverture d'un fichier avac l'application par défaut</summary>
+    ///<summary> Ouverture asynchrone d'un fichier avec l'application par défaut</summary>
     ///<param name="folderPath" type="cordova.file"> Chemin du dossier </param>
     ///<param name="fileName" type="String"> Nom du fichier </param>
 

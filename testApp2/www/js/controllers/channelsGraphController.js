@@ -54,9 +54,9 @@ app.controller('channelsGraphController', function ($scope, $location, $routePar
             
             chart.setOnSelectedIndexChangeListener(function (index)
             {
-                var ran = document.getElementById('range' + $scope.currentIndex);
+                var currentRange = document.getElementById('range' + $scope.currentIndex);
 
-                ran.value = index;
+                currentRange.value = index;
             });
 
             chart.drawChart();

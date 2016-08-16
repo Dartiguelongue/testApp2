@@ -1,11 +1,11 @@
 app.controller('deviceListController', function ($scope, $location)
 {
-    $scope.devices = devicesList;    
+    $scope.devices = devicesList;
 
     $scope.$parent.reset();
 
     $scope.showChannels = function (deviceIndex)
-    {        
+    {
         $scope.$parent.changeTitle(devicesList[deviceIndex].getChannels()[0].getFullName());
         $scope.$parent.changeColorTheme('theme-' + devicesList[deviceIndex].getChannels()[0].getTheme());
 

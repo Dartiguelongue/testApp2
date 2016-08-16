@@ -37,13 +37,13 @@ app.controller('mainController', function ($scope, $location, $http)
             pdfMake.createPdf(docDefinition).getBuffer(function (buffer)
             {
                 var binaryArray = new Uint8Array(buffer).buffer;
-
+                
                 writeBinaryFile(cordova.file.externalApplicationStorageDirectory, "test.pdf", buffer, function ()
                 {
                     openFile(cordova.file.externalApplicationStorageDirectory, "test.pdf");
                 });
             });
-        });    
+        });
     };
 
     $scope.changeColorTheme = function (value)
